@@ -22,6 +22,7 @@
     <main id="main">
       <div id="errors"></div>
     </main>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <div class="flexbox-container">
       <div>
         <h3>Repositories</h3>
@@ -42,6 +43,24 @@
         {{#each this}}
           <li>
             <h2>{{name}}</h2>
+            <p>{{description}}</p>
+            <a href="{{html_url}}">Go to Github</a>
+            <p>{{owner.login}}</p>
+            <img src="{{owner.avatar_url}}">
+            <a href="{{owner.url}}">Owner Page</a>
+            <a href="#" onclick="showCommits(this)" data-respository="{{name}}" data-owner="{{owner.login}}">Show Commits</a>
+          </li>
+        {{/each}}
+      </ul>
+    </script>
+    <script id="commits-template" type="text/x-handlebars-template">
+      <ul>
+        {{#each this}}
+          <li>
+            <p>{{sha}}</p>
+            <p>{{commit.author.name}}</p>
+            <p>{{author.login}}</p>
+            <img src="{{author.avatar_url}}">
           </li>
         {{/each}}
       </ul>
