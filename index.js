@@ -8,7 +8,7 @@ function showCommits(e) {
     const src = $("#commits-template").html();
     const template = Handlebars.compile(src);
     const commitsList = template(response);
-    $("details").html(commitsList);
+    $("#details").html(commitsList);
   });
 }
 
