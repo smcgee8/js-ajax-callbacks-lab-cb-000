@@ -3,7 +3,8 @@ function displayError(error) {
 }
 
 function showCommits(e) {
-  var url = e.dataset.url;
+  var repo = e.dataset.repository;
+  var owner = e.dataset.owner;
   $.get(url + '/commits', function(response) {
     const src = $("#commits-template").html();
     const template = Handlebars.compile(src);
