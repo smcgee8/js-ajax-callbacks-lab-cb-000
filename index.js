@@ -1,5 +1,5 @@
-function displayError() {
-
+function displayError(error) {
+  console.log(`Something went wrong: `+ error);
 }
 
 function showCommits(e) {
