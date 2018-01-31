@@ -3,6 +3,7 @@ function displayError() {
 }
 
 function showCommits(e) {
+  console.log(e)
   var url = e.dataset.url;
   $.get(url + '/commits', function(response) {
     console.log(response);
