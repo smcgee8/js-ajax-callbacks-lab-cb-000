@@ -19,7 +19,7 @@ function searchRepositories() {
     const template = Handlebars.compile(src);
     const repoList = template(response.items);
     $("#results").html(repoList);
-  });
+  }).fail(displayError);
 }
 
 $(document).ready(function (){
