@@ -2,8 +2,8 @@ function displayError() {
 
 }
 
-function showCommits() {
-
+function showCommits(e) {
+  var repo = e.dataset.repo;
 }
 
 function searchRepositories() {
