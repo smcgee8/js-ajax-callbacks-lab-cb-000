@@ -3,7 +3,10 @@ function displayError() {
 }
 
 function showCommits(e) {
-  var repo = e.dataset.repo;
+  var url = e.dataset.url;
+  $.get(url + '/commits', function(response) {
+    
+  });
 }
 
 function searchRepositories() {
