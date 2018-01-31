@@ -1,3 +1,11 @@
+function displayError() {
+  
+}
+
+function showCommits() {
+  
+}
+
 function searchRepositories() {
   query = $('#searchTerms').val();
   $.get('https://api.github.com/search/repositories?q=' + query, function(response) {
