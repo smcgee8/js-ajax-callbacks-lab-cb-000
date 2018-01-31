@@ -47,7 +47,7 @@
             <p>{{owner.login}}</p>
             <img src="{{owner.avatar_url}}">
             <a href="{{owner.url}}">Owner Page</a>
-            <a href="#" onclick="showCommits()" data-repo="{{name}}">Show Commits</a>
+            <a href="#" onclick="showCommits(this)" data-repo="{{name}}">Show Commits</a>
           </li>
         {{/each}}
       </ul>
