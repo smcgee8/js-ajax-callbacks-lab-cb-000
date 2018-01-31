@@ -44,7 +44,9 @@
             <h2>{{name}}</h2>
             <p>{{description}}</p>
             <a href="{{html_url}}">Go to Github</a>
-            <p>
+            <p>{{owner.login}}</p>
+            <img src="{{owner.avatar_url}}">
+            <a href="{{owner.url}}">Owner Page</a>
           </li>
         {{/each}}
       </ul>
