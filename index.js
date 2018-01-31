@@ -1,10 +1,9 @@
 function searchRepositories() {
   query = $('#searchTerms').val();
   $.get('https://api.github.com/search/repositories?q=' + query, function(response) {
-    const repos = JSON.parse(this.response);
-    const src = $("#respository-template").html();
+    const src = $("#repository-template").html();
     const template = Handlebars.compile(src);
-    const repoList = template(repos);
+    const repoList = template(response.items);
     $("#results").html(repoList);
   });
 }
