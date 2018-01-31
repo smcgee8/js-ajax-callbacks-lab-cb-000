@@ -5,7 +5,7 @@ function displayError(error) {
 function showCommits(e) {
   var repo = e.dataset.repository;
   var owner = e.dataset.owner;
-  $.get(url + '/commits', function(response) {
+  $.get('https://api.github.com/repos/' + owner + '/' + repo + '/commits', function(response) {
     const src = $("#commits-template").html();
     const template = Handlebars.compile(src);
     const commitsList = template(response);
