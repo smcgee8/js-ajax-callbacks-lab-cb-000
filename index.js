@@ -9,7 +9,7 @@ function showCommits(e) {
     const template = Handlebars.compile(src);
     const commitsList = template(response);
     $("#details").html(commitsList);
-  });
+  }).fail(displayError);
 }
 
 function searchRepositories() {
