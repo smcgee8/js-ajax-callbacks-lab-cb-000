@@ -56,9 +56,9 @@
       <ul>
         {{#each this}}
           <li>
-            <p>SHA</p>
-            <p>Author</p>
-            <p>author_login</p>
+            <p>{{sha}}</p>
+            <p>{{commit.author.name}}</p>
+            <p>{{author.login}}</p>
           </li>
         {{/each}}
       </ul>
