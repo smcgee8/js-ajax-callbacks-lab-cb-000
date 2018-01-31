@@ -3,7 +3,7 @@ function displayError() {
 }
 
 function showCommits() {
-  
+
 }
 
 function searchRepositories() {
