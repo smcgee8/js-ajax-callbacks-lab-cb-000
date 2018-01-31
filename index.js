@@ -3,10 +3,12 @@ function displayError() {
 }
 
 function showCommits(e) {
-  console.log(e)
   var url = e.dataset.url;
   $.get(url + '/commits', function(response) {
-    console.log(response);
+    const src = $("#commits-template").html();
+    const template = Handlebars.compile(src);
+    const commitsList = template(response.items);
+    $("details").html(commitsList);
   });
 }
 
